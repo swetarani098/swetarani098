@@ -1,0 +1,213 @@
+var=1
+/work/DQ/DQdatafiles/PANORAMA/Log/DQ_PNRM_WF_Invoke_20190621_113028.log
+wf_DQ_PNRM_PreProcessor
+/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcessor_Runtime_20190621.xml
+WARN:[ICMD_10047] Cannot log to the following log directory: [/opt/PowerCenter/logs]. Verify that the specified directory path exists and that the user has permission to access the directory.
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /opt/PowerCenter/isp/bin/infasetup_cli.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:289)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:165)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:163)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:256)
+	at org.apache.log4j.xml.DOMConfigurator.parseAppender(DOMConfigurator.java:220)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByName(DOMConfigurator.java:150)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByReference(DOMConfigurator.java:163)
+	at org.apache.log4j.xml.DOMConfigurator.parseChildrenOfLoggerElement(DOMConfigurator.java:425)
+	at org.apache.log4j.xml.DOMConfigurator.parseCategory(DOMConfigurator.java:345)
+	at org.apache.log4j.xml.DOMConfigurator.parse(DOMConfigurator.java:827)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:712)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:468)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:122)
+	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+	at com.informatica.loggingfw.loggingframework.FrameworksLoggerConfigurator.initializeFrameworksLogger(FrameworksLoggerConfigurator.java:61)
+	at com.informatica.componentfw.ComponentFramework.<clinit>(ComponentFramework.java:45)
+	at com.informatica.pcsf.cmdframework.Infacmd.main(Infacmd.java:158)
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /opt/PowerCenter/logs/servicesFrameworks.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:289)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:163)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:256)
+	at org.apache.log4j.xml.DOMConfigurator.parseAppender(DOMConfigurator.java:220)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByName(DOMConfigurator.java:150)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByReference(DOMConfigurator.java:163)
+	at org.apache.log4j.xml.DOMConfigurator.parseChildrenOfLoggerElement(DOMConfigurator.java:425)
+	at org.apache.log4j.xml.DOMConfigurator.parseCategory(DOMConfigurator.java:345)
+	at org.apache.log4j.xml.DOMConfigurator.parse(DOMConfigurator.java:827)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:712)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+	at com.informatica.loggingfw.loggingframework.FrameworksLoggerConfigurator.initializeFrameworksLogger(FrameworksLoggerConfigurator.java:61)
+	at com.informatica.componentfw.ComponentFramework.<clinit>(ComponentFramework.java:45)
+	at com.informatica.pcsf.cmdframework.Infacmd.main(Infacmd.java:158)
+Completed workflow [wf_DQ_PNRM_PreProcessor] with instance ID [go-AIJQ5EemI5qXtfR0r-g].
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs startWorkflow -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un GPMBatch -pd metlife123 -a app_panorama -wf wf_DQ_PNRM_PreProcessor -w true -pf /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcessor_Runtime_20190621.xml
+var=1
+sed -i -e s/~Holding~/csctomet_tst_pol_hld_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingDates~/csctomet_tst_pol_hld_dt_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingMeasures~/csctomet_tst_pol_hld_ms_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingComponentMeasures~/csctomet_tst_pol_hld_cmpnt_ms_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingComponents~/csctomet_tst_pol_hld_cmpnt_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingFinTran~/csctomet_tst_pol_hld_fin_tran_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingInsuredUnderwriting~/csctomet_tst_pol_hld_ins_uw_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingInvVehFinTran~/csctomet_tst_pol_hld_inv_veh_tran_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingInvVeh~/csctomet_tst_pol_hld_inv_veh_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingLoanMeasures~/csctomet_tst_pol_hld_ln_ms_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingLoans~/csctomet_tst_pol_hld_ln_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingProducer~/csctomet_tst_pol_hld_prdcr_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingRoleRegistration~/csctomet_tst_pol_hld_role_rgst_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+sed -i -e s/~HoldingRestrictions~/csctomet_tst_pol_hld_restr_20190603_01/g /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+/work/DQ/DQdatafiles/PANORAMA/Log/DQ_PNRM_WF_Invoke_20190621_113058.log
+wf_DQ_PNRM_PreProcess_BPDCheck
+/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+WARN:[ICMD_10047] Cannot log to the following log directory: [/opt/PowerCenter/logs]. Verify that the specified directory path exists and that the user has permission to access the directory.
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /opt/PowerCenter/isp/bin/infasetup_cli.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:289)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:165)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:163)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:256)
+	at org.apache.log4j.xml.DOMConfigurator.parseAppender(DOMConfigurator.java:220)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByName(DOMConfigurator.java:150)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByReference(DOMConfigurator.java:163)
+	at org.apache.log4j.xml.DOMConfigurator.parseChildrenOfLoggerElement(DOMConfigurator.java:425)
+	at org.apache.log4j.xml.DOMConfigurator.parseCategory(DOMConfigurator.java:345)
+	at org.apache.log4j.xml.DOMConfigurator.parse(DOMConfigurator.java:827)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:712)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:468)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:122)
+	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+	at com.informatica.loggingfw.loggingframework.FrameworksLoggerConfigurator.initializeFrameworksLogger(FrameworksLoggerConfigurator.java:61)
+	at com.informatica.componentfw.ComponentFramework.<clinit>(ComponentFramework.java:45)
+	at com.informatica.pcsf.cmdframework.Infacmd.main(Infacmd.java:158)
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: /opt/PowerCenter/logs/servicesFrameworks.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:289)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:163)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:256)
+	at org.apache.log4j.xml.DOMConfigurator.parseAppender(DOMConfigurator.java:220)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByName(DOMConfigurator.java:150)
+	at org.apache.log4j.xml.DOMConfigurator.findAppenderByReference(DOMConfigurator.java:163)
+	at org.apache.log4j.xml.DOMConfigurator.parseChildrenOfLoggerElement(DOMConfigurator.java:425)
+	at org.apache.log4j.xml.DOMConfigurator.parseCategory(DOMConfigurator.java:345)
+	at org.apache.log4j.xml.DOMConfigurator.parse(DOMConfigurator.java:827)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:712)
+	at org.apache.log4j.xml.DOMConfigurator.doConfigure(DOMConfigurator.java:618)
+	at org.apache.log4j.xml.DOMConfigurator.configure(DOMConfigurator.java:743)
+	at com.informatica.loggingfw.loggingframework.FrameworksLoggerConfigurator.initializeFrameworksLogger(FrameworksLoggerConfigurator.java:61)
+	at com.informatica.componentfw.ComponentFramework.<clinit>(ComponentFramework.java:45)
+	at com.informatica.pcsf.cmdframework.Infacmd.main(Infacmd.java:158)
+Completed workflow [wf_DQ_PNRM_PreProcess_BPDCheck] with instance ID [lMUQRJQ5EemI5qXtfR0r-g].
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs startWorkflow -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un GPMBatch -pd metlife123 -a app_panorama -wf wf_DQ_PNRM_PreProcess_BPDCheck -w true -pf /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_PreProcess_BPDCheck_Param_Runtime_20190621.xml
+Execution of BPD workflows are completed............
+
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_MainWrapper.sh: line 96: [: =: unary operator expected
+Different Business Process date present among the files....
+
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_WrapperAudit.sh: line 67: [: =: unary operator expected
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Target/Count_Status.txt': No such file or directory
+var=1
+Source Master File /work/DQ/DQdatafiles/PANORAMA/Metadata/DQ_PANORAMA_Source_File_Metadata_RunTime.csv exists in Metafile directory /work/DQ/DQdatafiles/PANORAMA/Metadata
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_ErrorNormalizer.sh: line 63: cd: /work/DQ/DQdatafiles/PANORAMA/Target: No such file or directory
+cat: BPD_DistCnt.txt: No such file or directory
+
+cat: /work/DQ/DQdatafiles/PANORAMA/Target/BPD_DistCnt.txt: No such file or directory
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_ErrorNormalizer.sh: line 69: [: =: unary operator expected
+var=1
+Source Master File /work/DQ/DQdatafiles/PANORAMA/Metadata/DQ_PANORAMA_Source_File_Metadata_RunTime.csv exists in Metafile directory /work/DQ/DQdatafiles/PANORAMA/Metadata
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_ErrorAudit.sh: line 66: cd: /work/DQ/DQdatafiles/PANORAMA/Target: No such file or directory
+cat: BPD_DistCnt.txt: No such file or directory
+
+cat: /work/DQ/DQdatafiles/PANORAMA/Target/BPD_DistCnt.txt: No such file or directory
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_ErrorAudit.sh: line 72: [: =: unary operator expected
+/work/DQ/DQdatafiles/PANORAMA/Script/DQ_PNRM_Archive.sh: line 30: cd: /work/DQ/DQdatafiles/PANORAMA/Target: No such file or directory
+mv: cannot stat `Holding_Unique.txt': No such file or directory
+mv: cannot stat `BPD_DtlsStatusFile.csv': No such file or directory
+mv: cannot stat `BPD_DistCnt.txt': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_DQ_Interim.csv': No such file or directory
+mv: cannot stat `pan_audit.txt': No such file or directory
+mv: cannot stat `pan_audit_count.txt': No such file or directory
+mv: cannot stat `pan_audit_bkp.txt': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_Holding_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingDates_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingComponentMeasures_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingComponents_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingFinTran_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingInsUndrwrt_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingInvVehFinTran_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingInvVeh_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingLoanMeasures_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingLoans_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingMeasure_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingProducer_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingRoleRegistration_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_HoldingRestrictions_DQ_Interim_Local.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_DQ_Interim_Local_BKP.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_DQ_Interim_Local_Final.csv': No such file or directory
+mv: cannot stat `STATUS.txt': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Target/*_STATUS.txt': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Target/Count_Status.txt': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Target/Error_Count_dtls.txt': No such file or directory
+mv: cannot stat `*_RI.csv': No such file or directory
+mv: cannot stat `*_PK.csv': No such file or directory
+mv: cannot stat `*_interim_error_out.dat': No such file or directory
+mv: cannot stat `csctomet_*_interim_error_out_target.dat': No such file or directory
+mv: cannot stat `*_csctomet_*': No such file or directory
+mv: cannot stat `*_error.dat': No such file or directory
+mv: cannot stat `*_err_smry.dat': No such file or directory
+mv: cannot stat `*_mr.csv': No such file or directory
+mv: cannot stat `*_mr_file.csv': No such file or directory
+mv: cannot stat `*_error.csv': No such file or directory
+mv: cannot stat `*_error_file.csv': No such file or directory
+mv: cannot stat `Error_Metric_*.csv': No such file or directory
+mv: cannot stat `recon_file1.txt': No such file or directory
+mv: cannot stat `recon_file2.txt': No such file or directory
+mv: cannot stat `temp1.txt': No such file or directory
+mv: cannot stat `temp2.txt': No such file or directory
+mv: cannot stat `correction_request_feed.txt': No such file or directory
+mv: cannot stat `Consolidated_mr_file.zip': No such file or directory
+mv: cannot stat `Consolidated_error_file.zip': No such file or directory
+mv: cannot stat `consolidated_error_metrics.zip': No such file or directory
+mv: cannot stat `Error_Metric1_dtls.csv': No such file or directory
+mv: cannot stat `Error_Metric3_dtls.csv': No such file or directory
+mv: cannot stat `Panorama_Audit_Table_DQ_Interim.csv': No such file or directory
+mv: cannot stat `DQ_PNRM_RUNTIME_*.csv': No such file or directory
+mv: cannot stat `*_RunTime_Err.done': No such file or directory
+mv: cannot stat `*_RunTime.done': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/BDTrigger/csctomet_qa_pol_hldfiles.trg': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/BDTrigger/csctomet_qa_pol_hldfiles.done': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/BDTrigger/*_pan_audit.done': No such file or directory
+mv: cannot stat `wf_DQ_PNRM_*_Param_Err.xml': No such file or directory
+mv: cannot stat `wf_DQ_PNRM_*_Param.xml': No such file or directory
+mv: cannot stat `wf_DQ_PNRM_PK_RI_Runtime_*.xml': No such file or directory
+mv: cannot stat `wf_DQ_PNRM_PushToBigdata_Param_Audit_Runtime_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Param_ErrorRecon_Runtime_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Param_Financial_Error1_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Param_Financial_Error_Runtime_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Target_Audit_Check_Runtime_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Error_Metric_Runtime_*.xml': No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_Error_Audit_Runtime_*.xml': No such file or directory
+	zip warning: name not matched: *_success.txt
+
+zip error: Nothing to do! (*_success.zip)
+mv: cannot stat `*_success.zip': No such file or directory
+cat: Error_STATUS_Final.txt: No such file or directory
+mv: cannot stat `/work/DQ/DQdatafiles/PANORAMA/Error//Error_STATUS_Final.txt': No such file or directory
