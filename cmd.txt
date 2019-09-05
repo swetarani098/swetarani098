@@ -1,0 +1,12 @@
+
+1. # of columns on file doesn’t match # of columns in data definition
+
+perl -ne 'print scalar( split( /\|/, $_ ) ) . "\n"' filename > filename_cc.csv(Replace | with 01)
+
+2. Copy filename_cc.csv and open it in excel to see if there are some lines with more or less # of columns. For the lines that don’t have the right # of columns as per data definition document
+
+3. To navigate to a specific line (for example line # 3259)
+
+sed -n '3259'p AGENCY_20180123.txt
+
+4. Copy this line to excel and compare it with a valid line of data to see which column has been shifted or is additionally present 

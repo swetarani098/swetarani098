@@ -1,0 +1,3 @@
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs listworkflowParams -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un GPMBatch -pd Metlife123 -sdn METNET.NET -a app_Dynamic -wf wf_testing_Dynamic -o /work/DQ/DQdatafiles/PANORAMA/Dump/param_dynamic_testing.xml 
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs startWorkflow -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un GPMBatch -pd metlife123 -a app_panorama -wf wf_DQ_PNRM_ErrorRecon -w true 
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs startWorkflow -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un GPMBatch -pd metlife123 -a app_panorama -wf wf_DQ_PNRM_ErrorRecon -w true -pf /work/DQ/DQdatafiles/PANORAMA/Param/wf_DQ_PNRM_ErrorRecon_Param.xml 

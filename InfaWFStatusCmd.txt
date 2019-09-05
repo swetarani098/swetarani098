@@ -1,0 +1,3 @@
+Command to track Active workflows:
+
+sh /opt/PowerCenter/server/bin/infacmd.sh wfs listActiveWorkflowInstances -dn DMN_GRID_DQ_DEV -sn DIS_SVC_DQ_DEV -un <username> -pd <pwd> -sdn METNET.NET

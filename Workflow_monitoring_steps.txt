@@ -1,0 +1,52 @@
+
+Prod Monitor Link: http://lxrsbinofp011:6008/monitoring/ 
+
+We need to monitor these three set of applications form MONDAY-FRIDAY
+
+1.EIP-This does not have any source file.It just have wrapper script.Go and check everything within this has run successfully or not.
+
+---2.00AM EST
+Appl_USD_EIP 
+
+Exceptions:
+If not run at the scheduled time ,mail the DL that it has not started yet.(Just Inform Them)
+If failed tell then it has failed.
+IF hanged in between,inform them to re-run the application.
+
+2.SFDC-It has two applications.Both are triggered simultaneously.They take data from database.
+Go and check whether both has run successfully or not or if one has not been triggered.
+
+---4.00AM
+App_SFDC_GBR_IND_Dataload 
+App_SFDC_GBR_ORG_Dataload 
+
+Exceptions:(Dont Run on Monday)
+If both or any one has not run at the scheduled time ,mail the DL that it has not started yet.
+If failed tell them it has failed.
+IF hanged in between,inform them to re-run the application.
+
+
+3.GPM-Developed by us only.They take data from source files.Go and check everything within this has run successfully or not.
+
+--7.00-7.30Am
+App_Workflow_GPM 
+ 
+Exceptions:
+If not run at the scheduled time ,mail the DL that it has not started yet.(Just Inform Them)
+If failed then tell them it has failed.
+IF hanged in between,inform them to re-run the application.
+Before that 
+Check whether the trigger file is present or not 
+
+/work/DQ/DQdatafiles/Input/GPM/SrcFiles
+/work/DQ/DQdatafiles/Output/
+
+If GPM_OUT.trg FILE present tell them to re run else create a trigger file and then tell them to trigger.
+
+OR CREATE 
+touch GPM_OUT.trg
+chmod 777 GPM_OUT.trg
+
+
+
+

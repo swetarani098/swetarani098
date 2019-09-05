@@ -1,0 +1,20 @@
+For QA execution Go to 014
+su dqworkflow
+
+cd  /work/DQ/DQdatafiles/Output/GPM/SCRIPT_DIR 
+./trigger.sh
+
+(Run the trigger file)
+
+When .trg file not found
+
+/work/DQ/DQdatafiles/Input/GPM/SrcFiles
+touch GPM_OUT.trg 
+chmod 777 GPM_OUT.trg 
+ 
+
+after doing the mentioned prcoess
+pls execute this
+bash -x /work/DQ/DQdatafiles/Output/GPM/SCRIPT_DIR/trigger.sh 
+ 
+https://cognizantcorp.webex.com/meet/saikat.giri Meeting Number: 590 520 473

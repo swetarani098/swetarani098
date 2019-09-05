@@ -1,0 +1,12 @@
+Paramters:
+
+lxrsbinofp011
+/work/DQ/DQdatafiles/Outbound/SFDCGBR/Params/Production_Paramater.prm
+Right click on this file and edit it
+0|1
+Now change this 0 flag to 2 if suppose application has not run yesterday and we are about to execute it today.
+Then the load is there for two day
+If there is pending load of two more days then replace 0 with that no of days.
+
+Note :
+0 can never be replaced by 1.It can be 0 or anything other than 1.

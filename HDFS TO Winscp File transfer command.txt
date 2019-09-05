@@ -1,0 +1,10 @@
+Login TO lxrs0hadnt01
+1.Copy the HDFS file path to local path of lxrs0hadnt01(WINSCP)
+Ex: hdfs dfs -get /Data/panorama/MFT/csctomet_tst_pol_hld_role_rgst_20180103_01.dat /home/METNET/aq913701/
+2.Type this in putty (sftp srani31@lxrsbinoft008)
+3.password:(Type password for lxrsbinoft008 password)
+4.cd /work/DQ/DQdatafiles/
+5.lcd /home/METNET/aq913701/
+6.put csctomet_tst_pol_hld_role_rgst_20180103_01.dat
+
+
